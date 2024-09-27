@@ -38,7 +38,7 @@ public class TP1_guessMyNumber_PERON {
         System.out.println("1) fcile");
         System.out.println("2) normal");
         System.out.println("3) difficile");
-        System.out.println("3) cauchemar");
+        System.out.println("4) cauchemar");
         choix = sc.nextInt();
 
         if (choix == 1) {
