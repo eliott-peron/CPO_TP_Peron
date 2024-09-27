@@ -23,12 +23,12 @@ public class TP1_convertisseur_PERON {
         }
          
          public static double FarenheitVersCelcius (double Farenhei ) {
-         Farenhei = (Farenhei-32)*0.55;
+         Farenhei = (Farenhei-32)*1.8;
          return Farenhei;
         }
          
          public static double CelciusVersFarenheit (double celciuse ) {
-         celciuse = (celciuse*0.55) + 32;
+         celciuse = (celciuse*1.8) + 32;
          return celciuse;
         }
          
