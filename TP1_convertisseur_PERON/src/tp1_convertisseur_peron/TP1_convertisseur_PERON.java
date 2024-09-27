@@ -119,10 +119,7 @@ public class TP1_convertisseur_PERON {
              
               System.out.println(nbr+" degre Farenheit est egal a "+FK+" deges Kelvin");             
          }
-           else{
-                System.out.println(nbr+"erreur"); 
-           }
-         
+           
    
         
         
