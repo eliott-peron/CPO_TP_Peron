@@ -18,7 +18,7 @@ public class TP1_convertisseur_PERON {
         }
          
          public static double KelvinVersCelcius (double tKelvin ) {
-         tKelvin = tKelvin+273;
+         tKelvin = tKelvin-273;
          return tKelvin;
         }
          
@@ -55,26 +55,75 @@ public class TP1_convertisseur_PERON {
      
 
  
-        double nombre;
-        double kelvin;
-        double metodevar;
-        double metodeconv;
         
-        System.out.println("saisir un nombre reel ");
-        nombre=sc.nextInt();
+        double nbr;
+        double choix;
+        double CK;
+        double KC;
+        double FC;
+        double CF;
+        double KF;
+        double FK;
         
-        kelvin = nombre+273;
+        System.out.println("Bonjour, saisissez une valeur :");
+        nbr = sc.nextInt();
+        System.out.println("Saisissez la conversion que vous souhaiter effectuer :");
         
-        System.out.println("la convertion de "+nombre+" C en kelvine est :"+kelvin+" K");
+        System.out.println("1) De Celcius vers Kelvin");
+        System.out.println("2) De Kelvin vers Celcius ");
+        System.out.println("3) De Farenheit vers Celcius ");
+        System.out.println("4) De Celcius vers Farenheit ");
+        System.out.println("5) De Kelvin vers Farenheit ");
+        System.out.println("6) De Farenheit vers Kelvin");
         
         
-        System.out.println("");
-        System.out.println("utilisation de la metode");
-        System.out.println("saisire un nouveau nombre :");
-        
-        metodevar = sc.nextInt();
-        metodeconv = CelciusVersKelvin (metodevar);
-        System.out.println("cela fais"+metodeconv+" K");
+         choix = sc.nextInt();
+         
+         
+        CK = CelciusVersKelvin (nbr);
+        KC = KelvinVersCelcius(nbr) ;
+        FC = FarenheitVersCelcius(nbr);
+        CF = CelciusVersFarenheit(nbr);
+        KF = KelvinVersFarenheit(nbr);
+        FK = FarenheitVersKelvin(nbr);
+         
+         
+         if (choix == 1){
+             
+            System.out.println(nbr+" degre Celcius est egal a "+CK+" deges Kelvin");
+             
+         }
+         if (choix == 2){
+             
+            System.out.println(nbr+" degre Kelvin est egal a "+KC+" deges Celcius");
+             
+         }
+         
+         if (choix == 3){
+             
+            System.out.println(nbr+" degre Farenheit est egal a "+FC+" deges Celcius");
+             
+         }
+         
+         if (choix == 4){
+             
+             System.out.println(nbr+" degre Celcius est egal a "+CF+" deges Farenheit");             
+         }
+         
+          if (choix == 5){
+             
+             System.out.println(nbr+" degre Kelvin est egal a "+KF+" deges Farenheit");             
+         }
+          
+           if (choix == 6){
+             
+              System.out.println(nbr+" degre Farenheit est egal a "+FK+" deges Kelvin");             
+         }
+           else{
+                System.out.println(nbr+"erreur"); 
+           }
+         
+   
         
         
     
