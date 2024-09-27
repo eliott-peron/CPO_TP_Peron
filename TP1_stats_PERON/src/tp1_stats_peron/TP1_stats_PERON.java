@@ -23,31 +23,28 @@ public class TP1_stats_PERON {
         int m;
 
         int[] tab = new int[6];
-        
+
         tab[0] = 0;
         tab[1] = 0;
         tab[2] = 0;
         tab[3] = 0;
         tab[4] = 0;
         tab[5] = 0;
-        
-        
+
         System.out.println("veuiller saisir un nombre");
         m = sc.nextInt();
 
         for (int i = 0; i < m; i++) {
-             int alea = generateurAleat.nextInt(6);
-             tab[alea]= tab[alea]+1;
+            int alea = generateurAleat.nextInt(6);
+            tab[alea] = tab[alea] + 1;
 
         }
-        
+
         for (int j = 0; j < 6; j++) {
-            
-                        System.out.println("Face " + (j + 1) + ": " + tab[j] + " fois");
 
-            
+            System.out.println("Face " + (j + 1) + ": " + tab[j] + " fois");
+
         }
-        
 
     }
 
