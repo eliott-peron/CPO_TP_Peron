@@ -18,40 +18,42 @@ public class convertisseur {
 
     public double CelciusVersKelvin(double tCelcius) {
         tCelcius = tCelcius + 273;
+        nbConversions = nbConversions + 1;
+
         return tCelcius;
-         
+
     }
 
     public double KelvinVersCelcius(double tKelvin) {
         tKelvin = tKelvin - 273;
-        nbConversions = nbConversions +1;
+        nbConversions = nbConversions + 1;
         return tKelvin;
-         
+
     }
 
     public double FarenheitVersCelcius(double Farenhei) {
         Farenhei = (Farenhei - 32) * 1.8;
-        nbConversions = nbConversions +1;
+        nbConversions = nbConversions + 1;
         return Farenhei;
     }
 
     public double CelciusVersFarenheit(double celciuse) {
         celciuse = (celciuse * 1.8) + 32;
-        nbConversions = nbConversions +1;
+        nbConversions = nbConversions + 1;
         return celciuse;
     }
 
     public double KelvinVersFarenheit(double kelvin) {
         double celsius = KelvinVersCelcius(kelvin);
         double fahrenheit = CelciusVersFarenheit(celsius);
-        nbConversions = nbConversions +1;
+        nbConversions = nbConversions - 1;
         return fahrenheit;
     }
 
     public double FarenheitVersKelvin(double Farenheit) {
         double celsius = FarenheitVersCelcius(Farenheit);
         double Kelvin = CelciusVersKelvin(celsius);
-        nbConversions = nbConversions +1;
+        nbConversions = nbConversions - 1;
         return Kelvin;
     }
 
