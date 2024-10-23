@@ -15,8 +15,23 @@ public class TP2_convertisseurObjet_PERON {
      */
     public static void main(String[] args) {
         
-        
-       convertiseur convertiseur1 = new convertiseur();
+        double a;
+      
+       convertisseur convertisseur1 = new convertisseur();
+       
+       convertisseur1.CelciusVersKelvin(1);
+       convertisseur1.KelvinVersCelcius(1);
+       convertisseur1.FarenheitVersCelcius(1);
+       convertisseur1.CelciusVersFarenheit(1);
+       convertisseur1.KelvinVersFarenheit(1);
+       convertisseur1.FarenheitVersKelvin(1);
+       System.out.println(convertisseur1);
+       
+       
+       
+       
+       
+       
     }
     
 }
