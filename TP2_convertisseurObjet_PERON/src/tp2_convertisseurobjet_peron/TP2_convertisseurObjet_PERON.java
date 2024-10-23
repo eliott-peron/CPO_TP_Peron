@@ -15,7 +15,7 @@ public class TP2_convertisseurObjet_PERON {
      */
     public static void main(String[] args) {
         
-        double a;
+     
       
        convertisseur convertisseur1 = new convertisseur();
        
