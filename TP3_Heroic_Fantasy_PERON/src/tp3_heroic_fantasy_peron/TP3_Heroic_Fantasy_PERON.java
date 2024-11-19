@@ -35,20 +35,21 @@ public class TP3_Heroic_Fantasy_PERON {
         // Affichage des caractéristiques des armes en parcourant le tableau
         for (int i = 0; i < armes.size(); i++) {
             System.out.println(armes.get(i));  // Appelle la méthode toString() de chaque arme
-           
+
         }
-         Guerrier guerrier = new Guerrier("Arthur", 100, true);
-        Magicien magicien = new Magicien("Merlin", 80, false);
+        Guerrier guerrier = new Guerrier("Conan", 78, false);
+        Guerrier guerrier1 = new Guerrier("Lannister", 45, true);
+        Magicien magicien = new Magicien("Gandalf", 65, true);
+        Magicien magicien1 = new Magicien("Garcimore", 44, false);
 
-        System.out.println(guerrier);  // Affiche : Personnage{nom='Arthur', niveauVie=100}, aCheval=true
-        System.out.println(magicien);  // Affiche : Personnage{nom='Merlin', niveauVie=80}, estConfirme=false
+   
 
-        // Modifier les propriétés avec les setters
-        guerrier.setACheval(false);
-        magicien.setEstConfirme(true);
+        Personnage[] personnages = {guerrier, guerrier1, magicien, magicien1};
 
-        System.out.println(guerrier);  // Affiche : Personnage{nom='Arthur', niveauVie=100}, aCheval=false
-        System.out.println(magicien);  // Affiche : Personnage{nom='Merlin', niveauVie=80}, estConfirme=true
+        for (Personnage personnage : personnages) {
+            System.out.println(personnage);
+
+        }
+
     }
 }
-    
