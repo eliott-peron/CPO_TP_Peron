@@ -4,10 +4,16 @@
  */
 package tp3_heroic_fantasy_peron;
 
+import Personnages.Guerrier;
+import Personnages.Magicien;
+import Personnages.Personnage;
 import arme.epee;
 import arme.baton;
 import arme.arme;
 import java.util.ArrayList;
+import Personnages.*;
+import arme.*;
+import tp3_heroic_fantasy_peron.EtreVivant;
 
 public class TP3_Heroic_Fantasy_PERON {
 
@@ -16,40 +22,34 @@ public class TP3_Heroic_Fantasy_PERON {
      */
     public static void main(String[] args) {
 
+        // Création des armes
         epee excalibur = new epee("Excalibur", 7, 5);
         epee durandal = new epee("Durandal", 4, 7);
-
-        // Création des bâtons avec les paramètres donnés
-        baton chene = new baton("Chene", 4, 5);
+        baton chene = new baton("Chêne", 4, 5);
         baton charme = new baton("Charme", 5, 6);
 
-        // Création d'un tableau dynamique (ArrayList) pour stocker les armes
-        ArrayList<arme> armes = new ArrayList<>();
+        // Création des personnages
+        Guerrier conan = new Guerrier("Conan", 78, true);
+        Magicien gandalf = new Magicien("Gandalf", 65, false);
 
-        // Ajout des armes dans le tableau dynamique
-        armes.add(excalibur);
-        armes.add(durandal);
-        armes.add(chene);
-        armes.add(charme);
+        // Ajout d'armes
+        conan.ajouterArme(excalibur);
+        conan.ajouterArme(durandal);
+        gandalf.ajouterArme(chene);
+        gandalf.ajouterArme(charme);
 
-        // Affichage des caractéristiques des armes en parcourant le tableau
-        for (int i = 0; i < armes.size(); i++) {
-            System.out.println(armes.get(i));  // Appelle la méthode toString() de chaque arme
+        // Equipement
+        conan.equiperArme("Excalibur");
+        gandalf.equiperArme("Chêne");
 
-        }
-        Guerrier guerrier = new Guerrier("Conan", 78, false);
-        Guerrier guerrier1 = new Guerrier("Lannister", 45, true);
-        Magicien magicien = new Magicien("Gandalf", 65, true);
-        Magicien magicien1 = new Magicien("Garcimore", 44, false);
+        // Combat
+        System.out.println("\nDébut du combat !");
+        conan.attaquer(gandalf);
+        gandalf.attaquer(conan);
 
-   
-
-        Personnage[] personnages = {guerrier, guerrier1, magicien, magicien1};
-
-        for (Personnage personnage : personnages) {
-            System.out.println(personnage);
-
-        }
-
+        // Affichage des résultats
+        System.out.println("\nÉtat des personnages :");
+        System.out.println(conan);
+        System.out.println(gandalf);
     }
 }
